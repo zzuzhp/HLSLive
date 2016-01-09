@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="HLSLive" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/HLSLive" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../ffmpeg_debug/ffmpeg-2.8-bin" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__STDC_CONSTANT_MACROS" />
+					<Add option="-D__STDC_FORMAT_MACROS" />
+					<Add directory="../ffmpeg_debug/ffmpeg-2.8" />
+					<Add directory="../../../../work2/videolib/trunk/pub" />
+				</Compiler>
+				<Linker>
+					<Add library="..\ffmpeg_debug\ffmpeg-2.8-lib\avcodec.lib" />
+					<Add library="..\ffmpeg_debug\ffmpeg-2.8-lib\avformat.lib" />
+					<Add library="..\ffmpeg_debug\ffmpeg-2.8-lib\avutil.lib" />
+					<Add library="..\..\..\..\work2\videolib\trunk\pub\_d_w32out\XVideo.lib" />
+					<Add library="C:\MinGW\lib\libpthread.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/HLSLive" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="AVCBitsReader.h" />
+		<Unit filename="AVCFrameChecker.cpp" />
+		<Unit filename="AVCFrameChecker.h" />
+		<Unit filename="AVCReader.cpp" />
+		<Unit filename="AVCReader.h" />
+		<Unit filename="HLSLive.cpp" />
+		<Unit filename="HLSLive.h" />
+		<Unit filename="ILive.h" />
+		<Unit filename="IOContext.cpp" />
+		<Unit filename="IOContext.h" />
+		<Unit filename="InputContext.cpp" />
+		<Unit filename="InputContext.h" />
+		<Unit filename="LiveCamera.cpp" />
+		<Unit filename="LiveCamera.h" />
+		<Unit filename="LiveFile.cpp" />
+		<Unit filename="LiveFile.h" />
+		<Unit filename="OutputContext.cpp" />
+		<Unit filename="OutputContext.h" />
+		<Unit filename="ThreadBase.cpp" />
+		<Unit filename="ThreadBase.h" />
+		<Unit filename="TsBucket.h" />
+		<Unit filename="TsIO.h" />
+		<Unit filename="TsMuxer.cpp" />
+		<Unit filename="TsMuxer.h" />
+		<Unit filename="TsSegmenter.cpp" />
+		<Unit filename="TsSegmenter.h" />
+		<Unit filename="cli.cpp" />
+		<Unit filename="config.h" />
+		<Unit filename="wingetopt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wingetopt.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
